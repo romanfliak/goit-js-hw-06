@@ -6,12 +6,15 @@ console.log(dataLength)
 const checkInputValueLength = (event) => {
 const currentValue = event.currentTarget.value
     if (Number(dataLength) === Number(currentValue.length)){
+    inputEi.classList.remove("invalid")
     inputEi.classList.add("valid")
 }
 else{
+    inputEi.classList.remove("valid")
     inputEi.classList.add("invalid")
 }
 
 }
 inputEi.addEventListener("blur", checkInputValueLength)
 console.log(checkInputValueLength);
+
